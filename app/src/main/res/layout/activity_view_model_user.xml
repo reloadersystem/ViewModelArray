@@ -5,25 +5,25 @@
     android:orientation="vertical">
 
     <EditText
-        android:id="@+id/userActivityEtNombre"
+        android:id="@+id/tx_nombre"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:hint="Nombre" />
 
     <EditText
-        android:id="@+id/userActivityEtEdad"
+        android:id="@+id/ext_edad"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:hint="Edad" />
 
     <Button
-        android:id="@+id/userActivityBtSalvar"
+        android:id="@+id/btn_guardar"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Salvar" />
+        android:text="Guardar" />
 
     <Button
-        android:id="@+id/userActivityBtVer"
+        android:id="@+id/btn_ver"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="Ver" />

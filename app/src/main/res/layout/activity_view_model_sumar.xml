@@ -6,12 +6,12 @@
     tools:context=".ui.ViewModelSumarActivity">
 
     <TextView
-        android:id="@+id/videModelSumarActivitytvSumar"
+        android:id="@+id/txtsumar"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"></TextView>
 
     <TextView
-        android:id="@+id/videModelSumarActivitytvSumarViewModel"
+        android:id="@+id/txtsumarViewModel"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"></TextView>
 

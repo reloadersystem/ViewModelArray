@@ -25,11 +25,10 @@ public class ViewModelSumarActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_view_model_sumar);
 
-
         sumarViewModel = ViewModelProviders.of(this).get(SumarViewModel.class);
 
-        tvsumar = findViewById(R.id.videModelSumarActivitytvSumar);
-        tvSumarViewModel = findViewById(R.id.videModelSumarActivitytvSumarViewModel);
+        tvsumar = findViewById(R.id.txtsumar);
+        tvSumarViewModel = findViewById(R.id.txtsumarViewModel);
 
         tvsumar.setText(" " + numero);
         tvSumarViewModel.setText(" " + sumarViewModel.getResultado());

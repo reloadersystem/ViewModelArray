@@ -9,9 +9,6 @@ import android.widget.TextView;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.lifecycle.ViewModelProviders;
 
-import java.util.ArrayList;
-import java.util.List;
-
 import ar.reloadersystem.myapplication.R;
 import ar.reloadersystem.myapplication.User;
 import ar.reloadersystem.myapplication.viewmodel.UserViewModel;
@@ -32,11 +29,11 @@ public class ViewModelUserActivity extends AppCompatActivity {
         tvUser = findViewById(R.id.userActivityTvUser);
         tvUserViewModel = findViewById(R.id.userActivityTvUserViewModel);
 
-        etNombre = findViewById(R.id.userActivityEtNombre);
-        etEdad = findViewById(R.id.userActivityEtEdad);
+        etNombre = findViewById(R.id.tx_nombre);
+        etEdad = findViewById(R.id.ext_edad);
 
-        btSalvar = findViewById(R.id.userActivityBtSalvar);
-        btVerUser = findViewById(R.id.userActivityBtVer);
+        btSalvar = findViewById(R.id.btn_guardar);
+        btVerUser = findViewById(R.id.btn_ver);
 
         userViewModel = ViewModelProviders.of(this).get(UserViewModel.class);
 
@@ -44,7 +41,7 @@ public class ViewModelUserActivity extends AppCompatActivity {
             @Override
             public void onClick(View view) {
 
-                User user= new User();
+                User user = new User();
                 user.setEdad(etEdad.getText().toString());
                 user.setNombre(etNombre.getText().toString());
                 userViewModel.addUser(user);
@@ -56,10 +53,9 @@ public class ViewModelUserActivity extends AppCompatActivity {
             public void onClick(View view) {
 
                 String texto = "";
-                for(User user: userViewModel.getUserList()){
-                    texto += user.getNombre() + " "+ user.getEdad()+"\n";
+                for (User user : userViewModel.getUserList()) {
+                    texto += user.getNombre() + " " + user.getEdad() + "\n";
                 }
-
                 tvUserViewModel.setText(texto);
             }
         });
